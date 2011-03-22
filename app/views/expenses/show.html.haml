@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @expense.date
+%p
+  %b Description:
+  = @expense.description
+%p
+  %b Amount:
+  = @expense.amount
+
+= link_to 'Edit', edit_expense_path(@expense)
+\|
+= link_to 'Back', expenses_path
