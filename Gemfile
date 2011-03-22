@@ -12,6 +12,7 @@ gem 'devise'
 gem 'shoulda'
 gem 'factory_girl'
 gem 'haml'
+gem 'haml-rails'
 
 
 # Use unicorn as the web server
