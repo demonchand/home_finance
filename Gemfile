@@ -9,6 +9,9 @@ gem 'mysql2'
 gem 'formtastic'
 gem 'cancan'
 gem 'devise'
+gem 'shoulda'
+gem 'factory_girl'
+gem 'haml'
 
 
 # Use unicorn as the web server
