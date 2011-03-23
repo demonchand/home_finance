@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20110322165330) do
   create_table "expenses", :force => true do |t|
     t.datetime "date"
     t.text     "description"
-    t.decimal  "amount",      :precision => 10, :scale => 0
+    t.decimal  "amount",      :precision => 10, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
