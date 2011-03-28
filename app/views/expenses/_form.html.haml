@@ -1,6 +1,6 @@
 = semantic_form_for @expense do |f|
   = f.inputs do 
     = f.input :date, :as => :string 
-    = f.input :description 
+    = f.input :description, :input_html => { :rows => 4, :cols => 35 } 
     = f.input :amount
   = f.buttons
