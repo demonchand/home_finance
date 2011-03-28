@@ -13,6 +13,8 @@ gem 'shoulda'
 gem 'factory_girl'
 gem 'haml'
 gem 'haml-rails'
+gem 'hpricot'
+gem 'ruby_parser'
 
 
 # Use unicorn as the web server
