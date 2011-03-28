@@ -15,8 +15,13 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <% if user_signed_in? %>
+    <%= link_to "Expenses", expenses_path %> |
+    <%= link_to "Home", root_url %> |
+    <%= link_to "My Account", edit_user_registration_path %> |
+    <%= link_to "Sign Out", destroy_user_session_path %> |
+  <% end %>
+  <%= yield %>
+  
 </body>
 </html>
