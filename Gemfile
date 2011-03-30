@@ -10,11 +10,12 @@ gem 'formtastic'
 gem 'cancan'
 gem 'devise'
 gem 'shoulda'
-gem 'factory_girl'
+#gem 'factory_girl'
 gem 'haml'
 gem 'haml-rails'
 gem 'hpricot'
 gem 'ruby_parser'
+gem 'factory_girl_rails',:git => "http://github.com/CodeMonkeySteve/factory_girl_rails.git"
 
 
 # Use unicorn as the web server
