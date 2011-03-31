@@ -1,0 +1,19 @@
+%h1 Listing savings
+
+%table
+  %tr
+    %th Balance amount
+    %th
+    %th
+    %th
+
+  - @savings.each do |saving|
+    %tr
+      %td= saving.balance_amount
+      %td= link_to 'Show', saving
+      %td= link_to 'Edit', edit_saving_path(saving)
+      %td= link_to 'Destroy', saving, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Saving', new_saving_path

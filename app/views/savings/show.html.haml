@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Balance amount:
+  = @saving.balance_amount
+
+= link_to 'Edit', edit_saving_path(@saving)
+\|
+= link_to 'Back', savings_path
