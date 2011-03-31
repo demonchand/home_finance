@@ -5,4 +5,6 @@ class ExpenseTest < Test::Unit::TestCase
   should validate_presence_of(:description)
   should_not allow_value("").for(:description)
   should validate_presence_of(:amount)
+  should validate_presence_of(:date)
+  
 end

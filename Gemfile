@@ -15,6 +15,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'hpricot'
 gem 'ruby_parser'
+gem 'heroku'
+
 #gem 'factory_girl_rails',:git => "http://github.com/CodeMonkeySteve/factory_girl_rails.git"
 
 
