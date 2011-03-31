@@ -1,8 +1,6 @@
 require 'test_helper'
 
-class SavingTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+class SavingTest < Test::Unit::TestCase
+  sav = Factory.create(:saving, :balance_amount => "1000")
+
 end
