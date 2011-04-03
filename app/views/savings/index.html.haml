@@ -3,6 +3,7 @@
 %table
   %tr
     %th Balance amount
+    %th Date Of Entry
     %th
     %th
     %th
@@ -10,6 +11,7 @@
   - @savings.each do |saving|
     %tr
       %td= saving.balance_amount
+      %td= saving.date
       %td= link_to 'Show', saving
       %td= link_to 'Edit', edit_saving_path(saving)
       %td= link_to 'Destroy', saving, :confirm => 'Are you sure?', :method => :delete
