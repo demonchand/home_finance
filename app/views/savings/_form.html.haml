@@ -1,13 +1,5 @@
-= form_for @saving do |f|
-  -if @saving.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@saving.errors.count, "error")} prohibited this saving from being saved:"
-      %ul
-        - @saving.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :balance_amount
-    = f.text_field :balance_amount
-  .actions
-    = f.submit 'Save'
+= semantic_form_for @saving do |f|
+  = f.inputs do
+    = f.input :balance_amount
+    = f.input :date, :as => :hidden, :value => Time.now
+  = f.buttons
