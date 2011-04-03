@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110331113043) do
+ActiveRecord::Schema.define(:version => 20110403142427) do
 
   create_table "expenses", :force => true do |t|
     t.datetime "date"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110331113043) do
     t.decimal  "balance_amount", :precision => 10, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "date"
   end
 
   create_table "users", :force => true do |t|
