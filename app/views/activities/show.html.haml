@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @activity.date
+%p
+  %b Description:
+  = @activity.description
+%p
+  %b From:
+  = @activity.from
+%p
+  %b To:
+  = @activity.to
+%p
+  %b Cash:
+  = @activity.cash
+
+= link_to 'Edit', edit_activity_path(@activity)
+\|
+= link_to 'Back', activities_path

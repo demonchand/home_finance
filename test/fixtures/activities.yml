@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2011-04-07
+  description: MyText
+  from: MyString
+  to: MyString
+  cash: 9.99
+
+two:
+  date: 2011-04-07
+  description: MyText
+  from: MyString
+  to: MyString
+  cash: 9.99
