@@ -44,8 +44,8 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        name1,name2,name3,name4 = "saving", "expense", @expense.description, @expense.amount
-        go_and_sign_the_register(name1,name2,name3,name4)
+#        name1,name2,name3,name4 = "saving", "expense", @expense.description, @expense.amount
+ #       go_and_sign_the_register(name1,name2,name3,name4)
         format.html { redirect_to(@expense, :notice => 'Expense was successfully created.') }
         format.xml  { render :xml => @expense, :status => :created, :location => @expense }
       else
