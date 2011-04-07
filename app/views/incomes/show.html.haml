@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name of the income source:
+  = @income.name_of_the_income_source
+%p
+  %b Date:
+  = @income.date
+%p
+  %b Money:
+  = @income.money
+
+= link_to 'Edit', edit_income_path(@income)
+\|
+= link_to 'Back', incomes_path

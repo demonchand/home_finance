@@ -10,12 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110331113043) do
+ActiveRecord::Schema.define(:version => 20110407073602) do
 
   create_table "expenses", :force => true do |t|
     t.datetime "date"
     t.text     "description"
     t.decimal  "amount",      :precision => 10, :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "incomes", :force => true do |t|
+    t.string   "name_of_the_income_source"
+    t.date     "date"
+    t.decimal  "money",                     :precision => 10, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

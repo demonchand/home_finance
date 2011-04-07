@@ -1,5 +1,7 @@
 HomeFinance::Application.routes.draw do
 
+  resources :incomes
+
   resources :savings
 
   devise_for :users

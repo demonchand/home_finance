@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name_of_the_income_source: MyString
+  date: 2011-04-07
+  money: 9.99
+
+two:
+  name_of_the_income_source: MyString
+  date: 2011-04-07
+  money: 9.99
