@@ -1,5 +1,7 @@
 HomeFinance::Application.routes.draw do
 
+  resources :account_types
+
   resources :incomes
 
   resources :savings

@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110407073602) do
+ActiveRecord::Schema.define(:version => 20110407084532) do
+
+  create_table "account_types", :force => true do |t|
+    t.string   "account_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "expenses", :force => true do |t|
     t.datetime "date"
