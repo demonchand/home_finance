@@ -21,6 +21,32 @@ class SavingsControllerTest < ActionController::TestCase
     should respond_with :success
     should render_template :show
   end
+
+  context "should new is work" do
+    setup { get :new }
+
+    should respond_with :success
+    should render_template :new
+  end
+
+  context "testing edit action" do
+    setup { get :edit, :id => Factory(:saving).id }
+
+    should respond_with :success
+    should_render_template :edit
+  end
+
+  context "create action" do
+    setup { post :create, :saving => Factory.create(:saving, :balance_amount => "20000") }
+
+    should respond_with :redirect
+    should redirect_to("show path"){ saving_path(assigns(:saving)) }
+  end
+
+  context "update action" do
+    setup { put :update, :id => Factory(:saving).id, :saving => Factor.build(:saving, :balance_amount => "111") }
+
+  end
   #setup do
   #  @saving = savings(:one)
   #end
