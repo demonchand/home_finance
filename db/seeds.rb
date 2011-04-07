@@ -9,3 +9,7 @@
 User.create!(:email => "demonchand@gmail.com", :password => "123456")
 User.create!(:email => "abc@gmail.com", :password => "123456")
 
+account = [ "expense", "saving" ]
+account.each do |x|
+  AccountType.create!(:account_name => x)
+end
