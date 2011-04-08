@@ -44,8 +44,8 @@ class IncomesController < ApplicationController
 
     respond_to do |format|
       if @income.save
-#        name1,name2,name3,name4 = "income", "saving", @income.name_of_the_income_source, @income.money
-#        go_and_sign_the_register(name1,name2,name3,name4)
+        name1,name2,name3,name4 = "income", "saving", @income.name_of_the_income_source, @income.money
+        go_and_sign_the_register(name1,name2,name3,name4)
         format.html { redirect_to(@income, :notice => 'Income was successfully created.') }
         format.xml  { render :xml => @income, :status => :created, :location => @income }
       else
