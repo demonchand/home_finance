@@ -1,19 +1,27 @@
-%h1 Listing savings
+/%h1 Listing savings
+/ 
+/%table
+/  %tr
+/    %th Balance amount
+/    %th
+/    %th
+/    %th
+/ 
+/  - @savings.each do |saving|
+/    %tr
+/      %td= saving.balance_amount
+/      %td= link_to 'Show', saving
+/      %td= link_to 'Edit', edit_saving_path(saving)
+/      %td= link_to 'Destroy', saving, :confirm => 'Are you sure?', :method => :delete
 
-%table
-  %tr
-    %th Balance amount
-    %th
-    %th
-    %th
+/%br
 
-  - @savings.each do |saving|
-    %tr
-      %td= saving.balance_amount
-      %td= link_to 'Show', saving
-      %td= link_to 'Edit', edit_saving_path(saving)
-      %td= link_to 'Destroy', saving, :confirm => 'Are you sure?', :method => :delete
+/= link_to 'New Saving', new_saving_path
 
-%br
+%h1 Balance
 
-= link_to 'New Saving', new_saving_path
+- @savings.each do |saving|
+  %p
+    %u
+      Now the Current Balance is :      
+    %b= saving.balance_amount
