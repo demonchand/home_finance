@@ -44,6 +44,8 @@ class RepaymentsController < ApplicationController
 
     respond_to do |format|
       if @repayment.save
+        name1,name2,name3,name4 = "saving", "repayment", "To settle the loan amount", @repayment.repayment_amount
+        go_and_sign_the_register(name1,name2,name3,name4)
         format.html { redirect_to(@repayment, :notice => 'Repayment was successfully created.') }
         format.xml  { render :xml => @repayment, :status => :created, :location => @repayment }
       else
