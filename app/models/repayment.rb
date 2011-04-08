@@ -9,7 +9,7 @@ class Repayment < ActiveRecord::Base
     saving_balance = Saving.find(1)
     if saving_balance.balance_amount > self.repayment_amount
       saving_balance.update_attributes(:balance_amount => saving_balance.balance_amount - repayment_amount)
-      loan = Loan.find(saving_balance.loan_id)
+      loan = Loan.find(self.loan_id)
       loan.update_attributes(:status => "paid")
       saving_balance.save!
       loan.save!
