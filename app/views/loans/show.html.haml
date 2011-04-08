@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Giver name:
+  = @loan.giver_name
+%p
+  %b Loan start date:
+  = @loan.loan_start_date
+%p
+  %b Loan promise date:
+  = @loan.loan_promise_date
+%p
+  %b Loan amount:
+  = @loan.loan_amount
+%p
+  %b Status:
+  = @loan.status
+
+= link_to 'Edit', edit_loan_path(@loan)
+\|
+= link_to 'Back', loans_path

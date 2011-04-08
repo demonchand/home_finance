@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  giver_name: MyString
+  loan_start_date: 2011-04-08
+  loan_promise_date: 2011-04-08
+  loan_amount: 9.99
+  status: MyString
+
+two:
+  giver_name: MyString
+  loan_start_date: 2011-04-08
+  loan_promise_date: 2011-04-08
+  loan_amount: 9.99
+  status: MyString
