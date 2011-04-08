@@ -1,4 +1,5 @@
 class Loan < ActiveRecord::Base
+  has_many :repayments
 
   after_create :money_goes_to_savings
   
