@@ -1,6 +1,6 @@
 = semantic_form_for @repayment do |f|
   = f.inputs do 
-    = f.input :loan_id
+    = f.input :loan_id, :as => :select, :collection => Loan.all
     = f.input :repayment_date 
     = f.input :repayment_amount 
   = f.buttons

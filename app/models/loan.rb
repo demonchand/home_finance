@@ -9,4 +9,8 @@ class Loan < ActiveRecord::Base
     sav = Saving.find(1)
     sav.update_attributes(:balance_amount => sav.balance_amount + self.loan_amount)
   end
+
+  def to_s
+    "#{giver_name}: #{loan_amount}"
+  end
 end
