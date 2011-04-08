@@ -44,6 +44,8 @@ class LoansController < ApplicationController
 
     respond_to do |format|
       if @loan.save
+        name1,name2,name3,name4 = "loan", "saving", @loan.giver_name, @loan.loan_amount
+        go_and_sign_the_register(name1,name2,name3,name4)
         format.html { redirect_to(@loan, :notice => 'Loan was successfully created.') }
         format.xml  { render :xml => @loan, :status => :created, :location => @loan }
       else
