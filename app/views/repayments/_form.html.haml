@@ -1,0 +1,19 @@
+= form_for @repayment do |f|
+  -if @repayment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@repayment.errors.count, "error")} prohibited this repayment from being saved:"
+      %ul
+        - @repayment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :loan_id
+    = f.text_field :loan_id
+  .field
+    = f.label :repayment_date
+    = f.date_select :repayment_date
+  .field
+    = f.label :repayment_amount
+    = f.text_field :repayment_amount
+  .actions
+    = f.submit 'Save'

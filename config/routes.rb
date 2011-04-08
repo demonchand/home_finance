@@ -1,5 +1,7 @@
 HomeFinance::Application.routes.draw do
 
+  resources :repayments
+
   resources :loans
 
   resources :activities

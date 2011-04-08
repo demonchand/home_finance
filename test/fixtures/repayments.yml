@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  loan_id: 1
+  repayment_date: 2011-04-08
+  repayment_amount: 9.99
+
+two:
+  loan_id: 1
+  repayment_date: 2011-04-08
+  repayment_amount: 9.99

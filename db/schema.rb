@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110408063938) do
+ActiveRecord::Schema.define(:version => 20110408084951) do
 
   create_table "account_types", :force => true do |t|
     t.string   "account_name"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(:version => 20110408063938) do
     t.date     "loan_promise_date"
     t.decimal  "loan_amount",       :precision => 10, :scale => 2
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "repayments", :force => true do |t|
+    t.integer  "loan_id"
+    t.date     "repayment_date"
+    t.decimal  "repayment_amount", :precision => 10, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Loan:
+  = @repayment.loan_id
+%p
+  %b Repayment date:
+  = @repayment.repayment_date
+%p
+  %b Repayment amount:
+  = @repayment.repayment_amount
+
+= link_to 'Edit', edit_repayment_path(@repayment)
+\|
+= link_to 'Back', repayments_path

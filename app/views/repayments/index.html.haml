@@ -1,0 +1,23 @@
+%h1 Listing repayments
+
+%table
+  %tr
+    %th Loan
+    %th Repayment date
+    %th Repayment amount
+    %th
+    %th
+    %th
+
+  - @repayments.each do |repayment|
+    %tr
+      %td= repayment.loan_id
+      %td= repayment.repayment_date
+      %td= repayment.repayment_amount
+      %td= link_to 'Show', repayment
+      %td= link_to 'Edit', edit_repayment_path(repayment)
+      %td= link_to 'Destroy', repayment, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Repayment', new_repayment_path
