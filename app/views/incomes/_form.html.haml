@@ -1,6 +1,7 @@
 = semantic_form_for @income do |f|
   = f.inputs do
     = f.input :name_of_the_income_source
+    /= f.input :date, :as => :string
     = f.input :date
     = f.input :money
   = f.buttons
