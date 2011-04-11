@@ -7,6 +7,9 @@
     %th Loan promise date
     %th Loan amount
     %th Status
+    %th Description
+    %th Type of credit
+    %th Name of the giver
     %th
     %th
     %th
@@ -18,6 +21,9 @@
       %td= loan.loan_promise_date
       %td= loan.loan_amount
       %td= loan.status
+      %td= loan.description
+      %td= loan.type_of_credit
+      %td= loan.name_of_the_giver
       %td= link_to 'Show', loan
       %td= link_to 'Edit', edit_loan_path(loan)
       %td= link_to 'Destroy', loan, :confirm => 'Are you sure?', :method => :delete
