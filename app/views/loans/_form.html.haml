@@ -1,11 +1,11 @@
 = semantic_form_for @loan do |f|
   = f.inputs do 
-    = f.input :giver_name 
+    = f.input :giver_name, :as => :select, :collection => [ "Bank", "Friends", "Relation" ]
     = f.input :loan_start_date 
     = f.input :loan_promise_date 
     = f.input :loan_amount 
     = f.input :status, :as => :select, :collection => [ "paid", "pending", "not paid yet" ] 
     = f.input :description, :input_html => { :rows => 4, :cols => 35} 
-    = f.input :type_of_credit, :as => :select, :collection => [ "money", "product" ]
+    = f.input :type_of_credit, :as => :select, :collection => [ "money", "Goods" ]
     = f.input :name_of_the_giver 
   = f.buttons
