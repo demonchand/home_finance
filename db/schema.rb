@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110408084951) do
+ActiveRecord::Schema.define(:version => 20110411071503) do
 
   create_table "account_types", :force => true do |t|
     t.string   "account_name"
@@ -52,6 +52,9 @@ ActiveRecord::Schema.define(:version => 20110408084951) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
+    t.string   "type_of_credit"
+    t.string   "name_of_the_giver"
   end
 
   create_table "repayments", :force => true do |t|
@@ -69,9 +72,9 @@ ActiveRecord::Schema.define(:version => 20110408084951) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "email",                                              :null => false
+    t.string   "encrypted_password",   :limit => 128,                :null => false
+    t.string   "password_salt",                                      :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
