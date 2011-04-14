@@ -1,1 +1,18 @@
 %h1 This is going on your account
+
+/ The expense operation
+- @expense_amount = 0
+
+- @expense_report.each do |x|
+  - @expense_amount += x.amount
+
+%h3
+  Total Expense amount is :
+  = number_to_currency(@expense_amount)
+
+/ This is for savings
+%h3
+  Current Balance is :
+  = @savings_report.balance_amount
+
+/ Now this is for loan details
