@@ -1,5 +1,7 @@
 HomeFinance::Application.routes.draw do
 
+  get "report/index"
+
   resources :repayments
 
   resources :loans
