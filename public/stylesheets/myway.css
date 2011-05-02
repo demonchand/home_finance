@@ -1,4 +1,6 @@
-#abc{
-color:blue;
-border:1px;
+body{
+   background-color:blue;
+}
+video{
+   padding-right:100px;
 }
